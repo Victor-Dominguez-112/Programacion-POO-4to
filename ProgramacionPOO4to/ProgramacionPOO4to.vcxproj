@@ -128,6 +128,9 @@
     <ClCompile Include="Ejercicio1_Estructuras.cpp" />
     <ClCompile Include="Ejercicio2_clases.cpp" />
     <ClCompile Include="Ejercicio3_Memoria_Dinamica.cpp" />
+    <ClCompile Include="DynamicArray.cpp" />
+    <ClCompile Include="EjercicioTemplate.cpp" />
+    <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="Maincpp.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -136,6 +139,9 @@
     <ClInclude Include="Ejercicio1_Estructuras.h" />
     <ClInclude Include="Ejercicio2_clases.h" />
     <ClInclude Include="Ejercicio3_Memoria_Dinamica.h" />
+    <ClInclude Include="DynamicArray.h" />
+    <ClInclude Include="EjercicioTemplate.h" />
+    <ClInclude Include="LinkedList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
