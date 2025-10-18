@@ -110,7 +110,7 @@ public:
 		if (count == 0)
 		{
 			// no hay nada que borrar porque está vacía.
-			cout << "Advertencia, tratando de borrar de una lista ligada vacía en BorrarNodoPorValor()." << endl;
+			cout << "Advertencia, tratando de borrar de una lista ligada vacia en BorrarNodoPorValor()." << endl;
 			return false;
 		}
 		// hay que encontrar el primer nodo que tenga data == valorDelNodoABorrar
@@ -165,7 +165,7 @@ public:
 			return first->data;
 
 		// si sí es nulo, entonces le imprimes un error al usuario: 
-		cout << "Advertencia se pidió el front de la lista ligada pero está vacía." << endl;
+		cout << "Advertencia se pidio el front de la lista ligada pero esta vacia." << endl;
 		return T{}; // regresamos el valor T por defecto, según el tipo que sea T.
 	}
 
@@ -174,7 +174,7 @@ public:
 	{
 		if (count == 0)
 		{
-			cout << "Advertencia se pidió el Back de la lista ligada pero está vacía." << endl;
+			cout << "Advertencia se pidio el Back de la lista ligada pero esta vacia." << endl;
 			return T{}; // regresamos el valor T por defecto, según el tipo que sea T.
 		}
 
@@ -194,7 +194,7 @@ public:
 	{
 		if (indice >= count)
 		{
-			cout << "ERROR: intentando acceder a un nodo con un índice inválido." << endl;
+			cout << "ERROR: intentando acceder a un nodo con un indice invalido." << endl;
 			return T{}; // retornamos un valor por defecto.
 		}
 
@@ -212,11 +212,38 @@ public:
 
 	/* LAS DE TAREA */
 	//  https://cplusplus.com/reference/.
-	// PushFront()
+	void PushFront(const T value)
+	{
+		Node* nuevoNodo = new Node(value); //creamos un nodo con el valor que deseaos insertar
+		nuevoNodo->next = first; //apuntamos el nuevo nodo al que esta justo enfrente  
+		first = nuevoNodo; //actualizamos first para que este apunte hacia el nuevo nodo
+		count++; //aumentamos el contador 
+	}
 
-	// PopFront()
+	void PopFront()
+	{
+		if (first == nullptr) //checamos si la lista se encuantra vacia
+		{
+			cout << "Advertencia, se esta intentando hacer PopFront en una lista vacia" << endl;
+			return;
+		}
+		Node* nodoAEliminar = first; //guardamos el nodo que se valla a eliminar
+		first = first->next; //actualizamos a first para que este apunte al siguente nodo
+		delete nodoAEliminar; //liberamos la memoria del nodo que fue eliminado
+		count--; //disminuimos el contador
+	}
 
-	// Print()
+	void Print()
+	{
+		Node* nodoActual = first; //empezamos en el primer nodo
+		cout << "LinkedList: "; //recoremos toda la lisa hasta llegar all final de la misma
+		while (nodoActual != nullptr)
+		{
+			cout << nodoActual->data << " - "; //imprimimos los nombres 
+			nodoActual = nodoActual->next; //nos movemos asia el siguente nodo
+		}
+		cout << "NULL" << endl; //indicamos el final de la lista
+	}
 
 	// Encontrar dónde nos falta liberar memoria en esta clase. Si sí hace falta impleméntenlo, 
 	// si no hace falta, expliquen por qué.

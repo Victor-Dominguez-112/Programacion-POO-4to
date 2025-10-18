@@ -44,11 +44,11 @@ int main()
 
 	//PARCIAL 2		PARCIAL 2		PARCIAL 2		PARCIAL 2		PARCIAL 2
 	//Tareas
-	MostrarEjercicioTemplate();
+	//MostrarEjercicioTemplate();
 	cout << endl;
-	DemostracionDynamicArray();
+	//DemostracionDynamicArray();
 	cout << endl;
-	//DemostracionLinkedList();
+	DemostracionLinkedList();
 	//Tareas 
 	//PARCIAL 2		PARCIAL 2		PARCIAL 2		PARCIAL 2		PARCIAL 2
 

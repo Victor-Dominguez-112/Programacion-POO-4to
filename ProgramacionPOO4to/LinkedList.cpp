@@ -17,11 +17,11 @@ void DemostracionLinkedList()
 	bool resultadoDeInsercion = myLinkedList.InsertAfterValue("Juan", "Pepe");
 	if (resultadoDeInsercion)
 	{
-		cout << "sí se insertó el valor Pepe después de Juan" << endl;
+		cout << "si se inserto el valor Pepe despues de Juan" << endl;
 	}
 	else
 	{
-		cout << "no se insertó el valor porque no se encontró el valorAEncontrar" << endl;
+		cout << "no se inserto el valor porque no se encontro el valorAEncontrar" << endl;
 	}
 
 	cout << myLinkedList.Front() << " es el nodo hasta el frente de la lista" << endl;
@@ -44,4 +44,9 @@ void DemostracionLinkedList()
 	myLinkedList.Back();
 
 	/* PRUEBAS DE FUNCIONES QUE HICIERON PARA SU TAREA */
+	myLinkedList.PushFront("Victor");
+	myLinkedList.PushFront("Eduardo");
+	myLinkedList.Print();
+	myLinkedList.PopFront();
+	myLinkedList.Print();
 }
