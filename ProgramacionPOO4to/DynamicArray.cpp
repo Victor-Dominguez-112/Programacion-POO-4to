@@ -57,21 +57,20 @@ void DemostracionDynamicArray()
 
 
 	/* PRUEBAS DE LAS FUNCIONES QUE USTEDES HARÁN PARA LA TAREA */
-	void push_back()
-	{
+	//push_back
+	myDArray.push_back(11); //agregamos un elemto mas 
+	myDArray.Print(); //imprimimos
 
-	}
+	//pop_back
+	cout << "Quitando el ultimo elemento: " << myDArray.pop_back() << endl; //quitamos el ultimo elemento el cual es 11 
+	myDArray.Print(); //imprimimos
 
-	void pop_back()
-	{
+	//shrink_to_fit
+	myDArray.shrink_to_fit(); //reducimos la capacidad (capacity) ppara que sea igaual que cout 
+	cout << "Capacidad despues de hacer shrink_to_fit: " << myDArray.GetCount() << endl; //imprimimos la capacidad actual 
 
-	}
-
-	void shirnk_to_fit()
-	{
-
-	}
 }
+
 
 //https://en.cppreference.com/w/cpp/container/vector.html
 //https://www.youtube.com/watch?v=yzaO3_QGkNA

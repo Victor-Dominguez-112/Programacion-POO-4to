@@ -185,6 +185,40 @@ public:
 	// si yo tengo count = 10, se ejecutan en total 22 líneas de código en Print.
 	// ¿si count fuera 1000, cuántas líneas se ejecutarían?
 
+
+
+	void push_back(const int value)
+	{
+		Append(value);
+	}
+
+
+	int pop_back()
+	{
+		if (count > 0)
+		{
+			count--;
+			return elements[count];
+		}
+		cout << "ERROR: el dynamic array estaba vacío." << endl;
+		return -INFINITY;
+	}
+
+
+	void shrink_to_fit()
+	{
+		if (count < capacity)
+		{
+			int* nuevoArray = new int[count];
+			for (int i = 0; i < count; i++)
+				nuevoArray[i] = elements[i];
+			delete[] elements;
+			elements = nuevoArray;
+			capacity = count;
+		}
+	}
+
+
 private:
 	// IMPORTANTE: las propiedades de elements, count, y capacity son privadas FORZOSAMENTE, por seguridad.
 
@@ -207,11 +241,5 @@ private:
 	// 3) borrar el viejo arreglo.
 
 };
-
-void push_back();
-
-void pop_back();
-
-void shirnk_to_fit();
 
 void DemostracionDynamicArray();

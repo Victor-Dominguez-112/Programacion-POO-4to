@@ -48,7 +48,7 @@ int main()
 	cout << endl;
 	DemostracionDynamicArray();
 	cout << endl;
-	DemostracionLinkedList();
+	//DemostracionLinkedList();
 	//Tareas 
 	//PARCIAL 2		PARCIAL 2		PARCIAL 2		PARCIAL 2		PARCIAL 2
 
