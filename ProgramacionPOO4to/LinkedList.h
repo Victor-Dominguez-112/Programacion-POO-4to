@@ -245,6 +245,25 @@ public:
 		cout << "NULL" << endl; //indicamos el final de la lista
 	}
 
+	void EliminarMemoria() //creamos la funcion para poder liberar la memoria 
+	{
+		Node* nodoActual = first; //empezamos con el primer nodo de la lista
+		while (nodoActual != nullptr) //mientras aun tengamos nodos por recorer para llegar al final
+		{
+			Node* nodoAEliminar = nodoActual; //guardamos el nodo actual para que se elimine despues
+			nodoActual = nodoActual->next; //nos movemos hacia el siguente nodo
+			delete nodoAEliminar; //liberamos la memoria de nodo en que estemos o el actual
+		}
+		first = nullptr; //reiniciamos el puntero al inicio
+		count = 0; //tambien reiniciamos el contador de los nodos
+	}
+
+	int Size() const //Funcion de ayuda para saber el tamaño despues de la funcion de limpiar
+	{
+		return count; //regresamos el tamaño de la variable 
+	}
+
+
 	// Encontrar dónde nos falta liberar memoria en esta clase. Si sí hace falta impleméntenlo, 
 	// si no hace falta, expliquen por qué.
 

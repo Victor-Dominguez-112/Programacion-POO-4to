@@ -44,9 +44,20 @@ void DemostracionLinkedList()
 	myLinkedList.Back();
 
 	/* PRUEBAS DE FUNCIONES QUE HICIERON PARA SU TAREA */
+	//PushFront()
 	myLinkedList.PushFront("Victor");
 	myLinkedList.PushFront("Eduardo");
+	//Print()
 	myLinkedList.Print();
+	//PopFront()
 	myLinkedList.PopFront();
+	//Print()
 	myLinkedList.Print();
+	//Limpiar()
+	myLinkedList.EliminarMemoria();
+	cout << "Cantidad de elementos después de la funcion EliminarMemoria: "<<myLinkedList.Size();
+
+	//https://cplusplus.com/reference/list/list/push_front/
+	//https://cplusplus.com/reference/list/list/pop_front/
+	//https://cplusplus.com/reference/
 }

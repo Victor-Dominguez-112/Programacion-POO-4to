@@ -46,7 +46,7 @@ int main()
 	//Tareas
 	//MostrarEjercicioTemplate();
 	cout << endl;
-	//DemostracionDynamicArray();
+	DemostracionDynamicArray();
 	cout << endl;
 	DemostracionLinkedList();
 	//Tareas 

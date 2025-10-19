@@ -58,7 +58,7 @@ void DemostracionDynamicArray()
 
 	/* PRUEBAS DE LAS FUNCIONES QUE USTEDES HARÁN PARA LA TAREA */
 	//push_back
-	myDArray.push_back(11); //agregamos un elemto mas 
+	myDArray.push_back(11); //agregamos un elemento mas 
 	myDArray.Print(); //imprimimos
 
 	//pop_back
@@ -66,12 +66,15 @@ void DemostracionDynamicArray()
 	myDArray.Print(); //imprimimos
 
 	//shrink_to_fit
-	myDArray.shrink_to_fit(); //reducimos la capacidad (capacity) ppara que sea igaual que cout 
+	myDArray.shrink_to_fit(); //reducimos la capacidad (capacity) para que sea igual que count
 	cout << "Capacidad despues de hacer shrink_to_fit: " << myDArray.GetCount() << endl; //imprimimos la capacidad actual 
 
 }
 
-
 //https://en.cppreference.com/w/cpp/container/vector.html
 //https://www.youtube.com/watch?v=yzaO3_QGkNA
 //https://cplusplus.com/reference/vector/vector/
+
+//https://www.programiz.com/cpp-programming/operator-overloading
+//https://www.geeksforgeeks.org/cpp/operator-overloading-cpp/
+//https://learn.microsoft.com/en-us/cpp/cpp/operator-overloading?view=msvc-170

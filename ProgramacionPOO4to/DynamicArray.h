@@ -189,7 +189,7 @@ public:
 
 	void push_back(const int value)
 	{
-		Append(value);
+		Append(value); //mandamos a llamar la función Append atreves de push_back (hace lo mismo)
 	}
 
 
@@ -197,25 +197,36 @@ public:
 	{
 		if (count > 0)
 		{
-			count--;
-			return elements[count];
+			count--; //reducimos el tamaño 
+			return elements[count]; //devolvemos el valor que fue eliminado
 		}
 		cout << "ERROR: el dynamic array estaba vacío." << endl;
-		return -INFINITY;
+		return -INFINITY; //regresamos el valor de -INFINITY
 	}
 
 
 	void shrink_to_fit()
 	{
-		if (count < capacity)
+		if (count < capacity) //solo si tenemos y contamos con memoria sobrante
 		{
-			int* nuevoArray = new int[count];
+			int* nuevoArray = new int[count]; //creamos un nuevo array con el tamaño necesario 
 			for (int i = 0; i < count; i++)
-				nuevoArray[i] = elements[i];
-			delete[] elements;
-			elements = nuevoArray;
-			capacity = count;
+				nuevoArray[i] = elements[i]; //copiamos los elementos que ya existian al nuevo array
+			delete[] elements;  //liberamos la memoria 
+			elements = nuevoArray; //actualizamos el puntero para que apunte al nuevo array
+			capacity = count; //tenemos la misma capacidad que es igual al numero de elementos reales que tenemos
 		}
+	}
+
+	//operator
+	int& operator[](const size_t indice)
+	{
+		return elements[indice];
+	}
+
+	const int& operator[](const size_t indice) const
+	{
+		return elements[indice];
 	}
 
 
