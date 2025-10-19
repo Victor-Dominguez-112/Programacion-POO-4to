@@ -44,7 +44,7 @@ int main()
 
 	//PARCIAL 2		PARCIAL 2		PARCIAL 2		PARCIAL 2		PARCIAL 2
 	//Tareas
-	//MostrarEjercicioTemplate();
+	MostrarEjercicioTemplate();
 	cout << endl;
 	DemostracionDynamicArray();
 	cout << endl;

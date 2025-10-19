@@ -18,6 +18,10 @@ DynamicArray::DynamicArray(int in_capacity)
 		elements = nullptr; // si es 0, no pierdes tiempo pidiendo memoria dinámica que puede que no se use.
 
 	count = 0; // le decimos que ahorita no tiene nada dentro, por lo tanto es 0.
+
+#if COUNT_DYNAMIC_ARRAY_COPIES
+	copyCounter = 0;
+#endif
 }
 
 DynamicArray::~DynamicArray()
@@ -27,6 +31,13 @@ DynamicArray::~DynamicArray()
 		// IMPORTANTE usar los '[]' cuando se hace delete de un arreglo de memoria dinámica.
 		delete[] elements;
 }
+
+#if COUNT_DYNAMIC_ARRAY_COPIES
+int DynamicArray::getCopyCounter()
+{
+	return copyCounter; //mostramos cuantas copias realizamos
+}
+#endif
 
 // como estamos pidiendo memoria dinámica, hay que recordar liberar memoria dinámica cuando ya no 
 // sea necesaria. (Cuando se le hace delete a este objeto, o cuando sale del scope (las {}) donde se declaró)
@@ -49,12 +60,11 @@ void DemostracionDynamicArray()
 	myDArray.Print();
 
 
-	cout << "imprimiendo el array dinámico" << endl;
+	cout << "imprimiendo el array dinamico" << endl;
 	for (int i = 0; i < myDArray.GetCount(); i++)
 	{
-		cout << myDArray.ObtenerElemento(i) << endl;
+		cout << myDArray.ObtenerElemento(i) << endl; 
 	}
-
 
 	/* PRUEBAS DE LAS FUNCIONES QUE USTEDES HARÁN PARA LA TAREA */
 	//push_back
@@ -69,11 +79,18 @@ void DemostracionDynamicArray()
 	myDArray.shrink_to_fit(); //reducimos la capacidad (capacity) para que sea igual que count
 	cout << "Capacidad despues de hacer shrink_to_fit: " << myDArray.GetCount() << endl; //imprimimos la capacidad actual 
 
+#if COUNT_DYNAMIC_ARRAY_COPIES
+	cout << "Copias que fueron realizadas durante el resize: " << myDArray.getCopyCounter() << endl; //mandamos a imprimir cuantas copias se realizaron durante el porpoceso
+#endif
+
 }
 
 //https://en.cppreference.com/w/cpp/container/vector.html
 //https://www.youtube.com/watch?v=yzaO3_QGkNA
 //https://cplusplus.com/reference/vector/vector/
+
+//https://learn.microsoft.com/es-es/cpp/preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp?view=msvc-170
+//https://www.reddit.com/r/cpp_questions/comments/j7wfef/what_is_the_need_for_ifndef_define_endif_inside/?tl=es-419
 
 //https://www.programiz.com/cpp-programming/operator-overloading
 //https://www.geeksforgeeks.org/cpp/operator-overloading-cpp/

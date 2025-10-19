@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 using namespace std;
+#define COUNT_DYNAMIC_ARRAY_COPIES 1
 //1) Necesitan investigar sobre la sobrecarga de operadores(ya lo vimos por encima en clase) para poder hacer una sobrecarga del operador '[]' para la clase DynamicArray y así poder acceder a los elementos como si fuera un array normalito.Por ejemplo :
 //DynamicArray<int> myDynamicArray;
 //myDynamicArray.Append(1984);
@@ -186,13 +187,14 @@ public:
 	// ¿si count fuera 1000, cuántas líneas se ejecutarían?
 
 
-
+	//funciones de tarea
+	//push_back
 	void push_back(const int value)
 	{
 		Append(value); //mandamos a llamar la función Append atreves de push_back (hace lo mismo)
 	}
 
-
+	//pop_back
 	int pop_back()
 	{
 		if (count > 0)
@@ -204,7 +206,7 @@ public:
 		return -INFINITY; //regresamos el valor de -INFINITY
 	}
 
-
+	//shrink_to_fit
 	void shrink_to_fit()
 	{
 		if (count < capacity) //solo si tenemos y contamos con memoria sobrante
@@ -218,17 +220,21 @@ public:
 		}
 	}
 
-	//operator
-	int& operator[](const size_t indice)
-	{
-		return elements[indice];
+	//operador
+	int& operator[](size_t indice) //le damos el permiso de modificar los elementos 
+	{ 
+		return elements[indice]; 
+	}
+	const int& operator[](size_t indice) const //se le permite acceder para que solo leea los elementos de objetos que sean constantes
+	{ 
+		return elements[indice]; 
 	}
 
-	const int& operator[](const size_t indice) const
-	{
-		return elements[indice];
-	}
 
+	//Directivas de preprocesador (#define, #if, #ifdef, #ifndef, #endif):
+#if COUNT_DYNAMIC_ARRAY_COPIES
+	int getCopyCounter(); // funcion auxiliar para mostrar cuántas copias se han hecho
+#endif
 
 private:
 	// IMPORTANTE: las propiedades de elements, count, y capacity son privadas FORZOSAMENTE, por seguridad.
@@ -244,6 +250,10 @@ private:
 
 	// Capacity, qué tamaño tiene realmente el array (tanto usado como vacío).
 	int capacity;
+
+#if COUNT_DYNAMIC_ARRAY_COPIES
+	int copyCounter; // cuenta cada una de las copias de manera individual de elementos durante el resize
+#endif
 
 	// Resize(X), es el que se encarga de cambiar el tamaño dinámicamente.
 	// esto involucra el proceso de:
