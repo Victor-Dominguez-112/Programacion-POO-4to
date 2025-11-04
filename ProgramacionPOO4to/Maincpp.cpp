@@ -12,6 +12,8 @@ using namespace std;
 #include "EjercicioTemplate.h"
 #include "DynamicArray.h"
 #include "LinkedList.h"
+//EXAMEN
+#include "SentinelLinkedList.h"
 //PAR 2
 
 int main()
@@ -44,12 +46,17 @@ int main()
 
 	//PARCIAL 2		PARCIAL 2		PARCIAL 2		PARCIAL 2		PARCIAL 2
 	//Tareas
-	MostrarEjercicioTemplate();
+	/*MostrarEjercicioTemplate();
 	cout << endl;
 	DemostracionDynamicArray();
 	cout << endl;
-	DemostracionLinkedList();
+	DemostracionLinkedList();*/
 	//Tareas 
+
+	//EXAMEN
+	DemostracionSentinelLinkedList();
+	//EXAMEN
+
 	//PARCIAL 2		PARCIAL 2		PARCIAL 2		PARCIAL 2		PARCIAL 2
 
 
