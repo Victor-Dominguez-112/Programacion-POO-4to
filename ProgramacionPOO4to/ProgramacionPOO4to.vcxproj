@@ -131,6 +131,7 @@
     <ClCompile Include="DynamicArray.cpp" />
     <ClCompile Include="EjercicioTemplate.cpp" />
     <ClCompile Include="LinkedList.cpp" />
+    <ClCompile Include="LQueue.cpp" />
     <ClCompile Include="Maincpp.cpp" />
     <ClCompile Include="SentinelLinkedList.cpp" />
   </ItemGroup>
@@ -143,6 +144,7 @@
     <ClInclude Include="DynamicArray.h" />
     <ClInclude Include="EjercicioTemplate.h" />
     <ClInclude Include="LinkedList.h" />
+    <ClInclude Include="LQueue.h" />
     <ClInclude Include="SentinelLinkedList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

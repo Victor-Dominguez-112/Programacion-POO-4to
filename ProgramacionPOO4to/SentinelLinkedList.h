@@ -187,25 +187,34 @@ public:
 
 	T PopFront()
 	{
-		if (count == 0)
+		if (count == 0) //Verificamos si la lista está vacía
 		{
+			// Si no hay elementos, muestra un mensaje de error
 			cout << "Error, trataron de hacer PopFront de una lista vacia" << endl;
 			return T{};
 		}
 
-		Node* nodoABorrar = NIL->next;
-		T valor = nodoABorrar->data;
+		//Si nuestra lista no esta vacia entramos aqui
+		//Guarda en un puntero el primer nodo real el que se encuentra después del centinela NIL
+		Node* nodoABorrar = NIL->next; 
+		T valor = nodoABorrar->data;//Guardamos el dato contenido en ese nodo para poder devolverlo al final
 
 		// Reconexiones
-		NIL->next = nodoABorrar->next;
-		nodoABorrar->next->prev = NIL;
+		NIL->next = nodoABorrar->next; //El centinela ahora apuntará hacia el siguiente nodo después del que se elimino
+		nodoABorrar->next->prev = NIL; //El nuevo nodo que pasa al ser el 1ro debera apuntar al centinela
 
-		delete nodoABorrar;
-		count--;
+		delete nodoABorrar; //Liberamos la memoria del nodo eliminado
+		count--; //Restamos a count
 
-		return valor;
+		return valor; //Devolvemos el valor del nodo que se eliminó
 	}
 	/* FIN DE FUNCIONES PARA EL EXAMEN QUE SE ENTREGA A MÁS TARDAR EL JUEVES 6 DE NOVIEMBRE A LAS 11:59 PM*/
+
+	//Codigo tomado de la clase llamada Queue.h del repositorio
+	int GetCount()
+	{
+		return count;
+	}
 
 private:
 	// clase anidada.

@@ -14,6 +14,7 @@ using namespace std;
 #include "LinkedList.h"
 //EXAMEN
 #include "SentinelLinkedList.h"
+#include "LQueue.h"
 //PAR 2
 
 int main()
@@ -55,6 +56,7 @@ int main()
 
 	//EXAMEN
 	DemostracionSentinelLinkedList();
+	DemostracionLQueue();
 	//EXAMEN
 
 	//PARCIAL 2		PARCIAL 2		PARCIAL 2		PARCIAL 2		PARCIAL 2

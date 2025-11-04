@@ -50,15 +50,15 @@ void DemostracionSentinelLinkedList()
 	/*  INICIO DEL CÓDIGO DE PRUEBA DE FUNCIONES DE LA TAREA 2 DEL SEGUNDO PARCIAL    */
 	cout << endl;
 	cout << "		Prueba funcion tarea" << endl;
-	SentinelLinkedList<string> lista2;
-	lista2.PushFront("uno");
-	lista2.PushFront("dos");
-	lista2.PushFront("tres");
+	SentinelLinkedList<string> lista2; //Creamos una nueva lista enlazada con centinela(SentinelLinkedList) que almacenará cadenas de texto(string)
+	lista2.PushFront("uno"); //Insertamos un elemento (uno) al inicio de la lista 
+	lista2.PushFront("dos"); //Insertamos un elemento (dos) al inicio de la lista y pasa al anterior hacia atras 
+	lista2.PushFront("tres"); //Insertamos un elemento (tres) al inicio de la lista y este quedara al inicio 
 
-	cout << "PopFront: " << lista2.PopFront() << endl; 
-	cout << "PopFront: " << lista2.PopFront() << endl; 
-	cout << "PopFront: " << lista2.PopFront() << endl; 
-	cout << "PopFront: " << lista2.PopFront() << endl; 
+	cout << "PopFront: " << lista2.PopFront() << endl; //Extraemos y mostramos el primer elemento de la lista el numero 1 el del frente
+	cout << "PopFront: " << lista2.PopFront() << endl; //Extraemos y mostramos el siguiente elemento
+	cout << "PopFront: " << lista2.PopFront() << endl; //Extraemos otra vez y mostramos el elemento que nos queda
+	cout << "PopFront: " << lista2.PopFront() << endl; //Intentara extraer otro elemento pero ya tenemos nuestra lista vacia
 
 	/*  FIN DEL CÓDIGO DE PRUEBA DE FUNCIONES DE LA TAREA 2 DEL SEGUNDO PARCIAL    */
 
