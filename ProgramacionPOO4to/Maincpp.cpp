@@ -16,6 +16,7 @@ using namespace std;
 #include "SentinelLinkedList.h"
 #include "LQueue.h"
 #include "LStack.h"
+#include "EjercicioHerencia.h"
 //PAR 2
 
 int main()
@@ -57,12 +58,21 @@ int main()
 
 	//EXAMEN
 	DemostracionSentinelLinkedList();
+	cout << endl;
 	DemostracionLQueue();
+	cout << endl;
 	DemostracionLStack();
+	cout << endl;
+	DemostracionHerencia();
 	//EXAMEN
 
 	//PARCIAL 2		PARCIAL 2		PARCIAL 2		PARCIAL 2		PARCIAL 2
 
+
+
+	//PARCIAL 3		PARCIAL 3		PARCIAL 3		PARCIAL 3		PARCIAL 3
+
+	//PARCIAL 3		PARCIAL 3		PARCIAL 3		PARCIAL 3		PARCIAL 3
 
 	return 0;
 }

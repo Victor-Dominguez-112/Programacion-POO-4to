@@ -124,12 +124,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Array_booleanos.cpp" />
+    <ClCompile Include="Circulo.cpp" />
+    <ClCompile Include="Cuadrado.cpp" />
+    <ClCompile Include="Cubo.cpp" />
     <ClCompile Include="Dia_de_la_Semana_Tarea1.cpp" />
     <ClCompile Include="Ejercicio1_Estructuras.cpp" />
     <ClCompile Include="Ejercicio2_clases.cpp" />
     <ClCompile Include="Ejercicio3_Memoria_Dinamica.cpp" />
     <ClCompile Include="DynamicArray.cpp" />
+    <ClCompile Include="EjercicioHerencia.cpp" />
     <ClCompile Include="EjercicioTemplate.cpp" />
+    <ClCompile Include="FiguraNlados.cpp" />
+    <ClCompile Include="Linea.cpp" />
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="LQueue.cpp" />
     <ClCompile Include="LStack.cpp" />
@@ -138,12 +144,18 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Array_booleanos.h" />
+    <ClInclude Include="Circulo.h" />
+    <ClInclude Include="Cuadrado.h" />
+    <ClInclude Include="Cubo.h" />
     <ClInclude Include="Dia_de_la_Semana_Tarea1.h" />
     <ClInclude Include="Ejercicio1_Estructuras.h" />
     <ClInclude Include="Ejercicio2_clases.h" />
     <ClInclude Include="Ejercicio3_Memoria_Dinamica.h" />
     <ClInclude Include="DynamicArray.h" />
+    <ClInclude Include="EjercicioHerencia.h" />
     <ClInclude Include="EjercicioTemplate.h" />
+    <ClInclude Include="FiguraNlados.h" />
+    <ClInclude Include="Linea.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="LQueue.h" />
     <ClInclude Include="LStack.h" />
