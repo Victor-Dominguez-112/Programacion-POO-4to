@@ -69,6 +69,9 @@
     <ClCompile Include="Linea.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="BinarySearchTree.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Dia_de_la_Semana_Tarea1.h">
@@ -120,6 +123,9 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="Linea.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="BinarySearchTree.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>

@@ -19,6 +19,10 @@ using namespace std;
 #include "EjercicioHerencia.h"
 //PAR 2
 
+//PAR 3
+#include "BinarySearchTree.h"
+//PAR 3
+
 int main()
 {
 	//PARCIAL 1		PARCIAL 1		PARCIAL 1	
@@ -57,13 +61,13 @@ int main()
 	//Tareas 
 
 	//EXAMEN
-	DemostracionSentinelLinkedList();
+	/*DemostracionSentinelLinkedList();
 	cout << endl;
 	DemostracionLQueue();
 	cout << endl;
 	DemostracionLStack();
 	cout << endl;
-	DemostracionHerencia();
+	DemostracionHerencia();*/
 	//EXAMEN
 
 	//PARCIAL 2		PARCIAL 2		PARCIAL 2		PARCIAL 2		PARCIAL 2
@@ -71,7 +75,7 @@ int main()
 
 
 	//PARCIAL 3		PARCIAL 3		PARCIAL 3		PARCIAL 3		PARCIAL 3
-
+	DemostracionBinarySearchTree();
 	//PARCIAL 3		PARCIAL 3		PARCIAL 3		PARCIAL 3		PARCIAL 3
 
 	return 0;

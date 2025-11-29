@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Array_booleanos.cpp" />
+    <ClCompile Include="BinarySearchTree.cpp" />
     <ClCompile Include="Circulo.cpp" />
     <ClCompile Include="Cuadrado.cpp" />
     <ClCompile Include="Cubo.cpp" />
@@ -144,6 +145,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Array_booleanos.h" />
+    <ClInclude Include="BinarySearchTree.h" />
     <ClInclude Include="Circulo.h" />
     <ClInclude Include="Cuadrado.h" />
     <ClInclude Include="Cubo.h" />
