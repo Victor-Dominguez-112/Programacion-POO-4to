@@ -27,7 +27,7 @@ public:
 		}
 	}
 
-	void Add(T value)
+	virtual void Add(T value)
 	{
 		// Inserta el elemento con valor 'value' en el índice que nos dice la función hash.
 		size_t indice = FuncionHash(value);
@@ -101,7 +101,7 @@ public:
 	}
 
 	//esta es la obreescritura de la funcion Add 
-	void Add(T value) //cambiaremos el comportamiento original para adaptarlo a un Set
+	void Add(T value) override//cambiaremos el comportamiento original para adaptarlo a un Set
 	{
 		if (this->Encontrar(value)) //usaremos la funcion encontrar que esta es heredada de la padre para poder si el valor ya existe
 		{

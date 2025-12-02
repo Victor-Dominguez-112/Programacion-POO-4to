@@ -13,6 +13,9 @@ void DemomostracionHashTableProbing()
     valores.Insert(20, 20);  //colision doble pasa lo mismo con el anterior caso pero se movera el doble por el 10 y 15 se movera a la derecha dos veces
     valores.Insert(7, 7);    //la colision intermedia este deberia de estar en el indice 2 pero ya esta ocupado asi que saltara al indice 3 que se encuentra vacio
 
+    //presentacion HashTables
+    //https://drive.google.com/drive/folders/1wqUFywVCEyMJaT8TQD4gCQsQj-lcS1RZ?usp=sharing 
+
     cout << "Tabla final:" << endl;
     valores.Print();
 }
