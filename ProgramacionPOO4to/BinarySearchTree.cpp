@@ -162,7 +162,7 @@ void DemostracionBinarySearchTree()
 	myBST.InOrderRecursivo(); //volvemos a imprimir el arbol y ahora esta vacio puesto que eliminamos arriba
 	//--------------------------------------------> EJERCICIO 3 <--------------------------------------------
 
-	//---------------------------------> FUNCION POST - ORDER ITERATIVA <---------------------------------
+	//-----------------------------------> FUNCION POST - ORDER ITERATIVA <-----------------------------------
 	cout << endl;
 	cout << "PRUEBA FUNCION POST - ORDER ITERATIVA " << endl;
 	//creamos otro arbol de 6 objetos
@@ -176,6 +176,6 @@ void DemostracionBinarySearchTree()
 	cout << "PostOrder iterativo: ";
 	myBST.PostOrderIterativo(); //mandamos a llamar la funcion para imprimir
 	cout << endl;
-	//---------------------------------> FUNCION POST - ORDER ITERATIVA <---------------------------------
+	//-----------------------------------> FUNCION POST - ORDER ITERATIVA <-----------------------------------
 
 }

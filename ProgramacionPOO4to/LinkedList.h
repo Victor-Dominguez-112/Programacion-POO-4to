@@ -158,6 +158,33 @@ public:
 		return false;
 	}
 
+	bool Encontrar(const T valorAEncontrar)
+	{
+		if (count == 0)
+		{
+			// no hay nada que borrar porque está vacía.
+			cout << "Advertencia, llamando Encontrar de una lista ligada vacía." << endl;
+			return false;
+		}
+		// hay que encontrar el primer nodo que tenga data == valorDelNodoABorrar
+		// encontrar el nodo donde está valorAEncontrar
+		// comenzamos al inicio de la lista (el nodo first)
+		Node* nodoActual = first;
+
+		while (nodoActual != nullptr)
+		{
+			// checamos si EL NODO QUE SIGUE este nodo es a quien buscamos (el que tiene valorDelNodoABorrar)
+			if (nodoActual->data == valorAEncontrar)
+			{
+				return true;
+			}
+			nodoActual = nodoActual->next; // el nodo actual se mueve al que le sigue en la lista.
+		}
+
+		// si se acaba el while, entonces no lo encontramos, 
+		return false;
+	}
+
 	// regresa el valor almacenado en el nodo del inicio de la lista ligada
 	T Front()
 	{
@@ -263,6 +290,10 @@ public:
 		return count; //regresamos el tamaño de la variable 
 	}
 
+	int GetCount()
+	{
+		return count;
+	}
 
 	// Encontrar dónde nos falta liberar memoria en esta clase. Si sí hace falta impleméntenlo, 
 	// si no hace falta, expliquen por qué.

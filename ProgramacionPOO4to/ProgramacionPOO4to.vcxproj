@@ -136,6 +136,8 @@
     <ClCompile Include="EjercicioHerencia.cpp" />
     <ClCompile Include="EjercicioTemplate.cpp" />
     <ClCompile Include="FiguraNlados.cpp" />
+    <ClCompile Include="HashTableChaining.cpp" />
+    <ClCompile Include="HashTableProbing.cpp" />
     <ClCompile Include="Linea.cpp" />
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="LQueue.cpp" />
@@ -157,6 +159,8 @@
     <ClInclude Include="EjercicioHerencia.h" />
     <ClInclude Include="EjercicioTemplate.h" />
     <ClInclude Include="FiguraNlados.h" />
+    <ClInclude Include="HashTableChaining.h" />
+    <ClInclude Include="HashTableProbing.h" />
     <ClInclude Include="Linea.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="LQueue.h" />

@@ -21,6 +21,8 @@ using namespace std;
 
 //PAR 3
 #include "BinarySearchTree.h"
+#include "HashTableChaining.h"
+#include "HashTableProbing.h"
 //PAR 3
 
 int main()
@@ -76,6 +78,10 @@ int main()
 
 	//PARCIAL 3		PARCIAL 3		PARCIAL 3		PARCIAL 3		PARCIAL 3
 	DemostracionBinarySearchTree();
+	cout << endl;
+	DemomostracionHashTableProbing();
+	cout << endl;
+	DemostracionHashTableChaining();
 	//PARCIAL 3		PARCIAL 3		PARCIAL 3		PARCIAL 3		PARCIAL 3
 
 	return 0;
