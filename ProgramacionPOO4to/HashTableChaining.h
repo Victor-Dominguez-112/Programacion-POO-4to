@@ -1,6 +1,7 @@
 #pragma once
-
 #include "LinkedList.h"
+#include <stdexcept>
+
 
 template <typename T>
 class HashTableChaining
@@ -89,4 +90,29 @@ private:
 
 };
 
+template <typename T>
+//definimos la clase HashSet que heredara de HashTableChaining todas las funciones que se encuentran en HashTableChaining
+class HashSet : public HashTableChaining<T> 
+{
+public:
+	//nuestro constructor 
+	HashSet(size_t numListas) : HashTableChaining<T>(numListas)
+	{ //este recibe el tamaño numListas y se lo pasara inmediatamente al constructor del Padre 
+	}
+
+	//esta es la obreescritura de la funcion Add 
+	void Add(T value) //cambiaremos el comportamiento original para adaptarlo a un Set
+	{
+		if (this->Encontrar(value)) //usaremos la funcion encontrar que esta es heredada de la padre para poder si el valor ya existe
+		{
+			//si nuestro valor ya existe lanzaremos un error y acabamos de ejeutar 
+			throw runtime_error("Error: no se permiten los elementos repetidos en el HashSet");
+		}
+
+		//si el valor no está repetido llamaremos a la función Add la original de la clase padre
+		HashTableChaining<T>::Add(value); //y esto se encargara de la logica como el hash listas y todo eso
+	}
+};
+
+void DemostracionHashSet();
 void DemostracionHashTableChaining();

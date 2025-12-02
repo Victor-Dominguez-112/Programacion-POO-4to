@@ -82,6 +82,8 @@ int main()
 	DemomostracionHashTableProbing();  
 	cout << endl;
 	DemostracionHashTableChaining();
+	cout << endl;
+	DemostracionHashSet();
 	//PARCIAL 3		PARCIAL 3		PARCIAL 3		PARCIAL 3		PARCIAL 3
 
 	return 0;
