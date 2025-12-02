@@ -16,3 +16,4 @@ void DemomostracionHashTableProbing()
     cout << "Tabla final:" << endl;
     valores.Print();
 }
+  

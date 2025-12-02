@@ -79,7 +79,7 @@ int main()
 	//PARCIAL 3		PARCIAL 3		PARCIAL 3		PARCIAL 3		PARCIAL 3
 	DemostracionBinarySearchTree();
 	cout << endl;
-	DemomostracionHashTableProbing();
+	DemomostracionHashTableProbing();  
 	cout << endl;
 	DemostracionHashTableChaining();
 	//PARCIAL 3		PARCIAL 3		PARCIAL 3		PARCIAL 3		PARCIAL 3
